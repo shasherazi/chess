@@ -1,5 +1,11 @@
+import styles from '../styles/Home.module.css';
+
 export default function Home() {
   return (
-    <div>Welcom to chess webapp</div>
+    <div className={styles.home}>
+      <button className={styles.button} type="button">
+        Play now!
+      </button>
+    </div>
   );
 }
