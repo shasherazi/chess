@@ -8,8 +8,11 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint-ts": "eslint .",
+    "lint-ts-fix": "eslint . --fix",
     "lint-css": "prettier --check . && csslint . --quiet",
-    "lint": "npm run lint-ts && npm run lint-css"
+    "lint-css-fix": "prettier --write . && csslint . --quiet",
+    "lint": "npm run lint-ts && npm run lint-css",
+    "lint-fix": "npm run lint-ts-fix && npm run lint-css-fix"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^3.1.0",
