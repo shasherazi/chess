@@ -1,0 +1,21 @@
+.nav{
+    height: 70px;
+}
+
+.navList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgDiv{
+    width: 100%;
+}
+
+.navLeft{
+    flex:1;
+}
+
+.navRight{
+    flex:1;
+}
