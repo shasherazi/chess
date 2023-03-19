@@ -1,0 +1,10 @@
+# Ignore
+dist
+build
+node_modules
+
+*.ts
+*.tsx
+*.js
+*.jsx
+*.json
