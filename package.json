@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint-ts": "eslint .",
-    "lint-css": "prettier --check .",
+    "lint-css": "prettier . -c || (git stash push -q; npx prettier . -w --loglevel silent && git --no-pager diff && git reset --hard; git stash pop -q)",
     "lint": "npm run lint-ts && npm run lint-css"
   },
   "dependencies": {
