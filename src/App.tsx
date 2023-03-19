@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
@@ -16,5 +16,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -1,5 +1,5 @@
 import { Outlet, Link } from 'react-router-dom';
-import chessLogo from '../assets/images/chessLogo.png';
+import chessLogo from '../assets/images/chessLogo.jpg';
 import styles from '../styles/Nav.module.css';
 
 export default function Nav() {
@@ -7,13 +7,10 @@ export default function Nav() {
     <>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
-          <div className={styles.navLeft}>
-            <li className={styles.navItem}>
-              <div className={styles.imgDiv}>
-                <img src={chessLogo} alt="chess logo" className={styles.navLogo} />
-              </div>
-            </li>
-          </div>
+          <Link to="/" className={styles.navLeft}>
+            <img src={chessLogo} alt="chess logo" className={styles.navLogo} />
+            <h1 className={styles.navTitle}>Chess</h1>
+          </Link>
           <div className={styles.navRight}>
             <li className={styles.navItem}>
               <Link to="/" className={styles.navLink}>Home</Link>
