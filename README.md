@@ -19,6 +19,7 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+  - [Linting](#linting)
   - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
@@ -65,6 +66,20 @@ Install this project with:
 
 ```sh
   npm install
+```
+
+### Linting
+
+To see the linter errors, execute the following command:
+
+```sh
+  npm run lint
+```
+
+To fix the linter errors, execute the following command:
+
+```sh
+  npm run lint-fix
 ```
 
 ### Usage
