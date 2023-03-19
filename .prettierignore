@@ -8,3 +8,4 @@ node_modules
 *.js
 *.jsx
 *.json
+*.yml

@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint-ts": "eslint .",
+    "lint-css": "prettier --check .",
+    "lint": "npm run lint-ts && npm run lint-css"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^3.1.0",
