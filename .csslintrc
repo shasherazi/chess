@@ -1,0 +1,8 @@
+{
+  "ignore": [
+    "universal-selector",
+    "import",
+    "order-alphabetical",
+    "box-sizing"
+  ]
+}
