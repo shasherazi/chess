@@ -1,11 +1,9 @@
 function Test() {
   return (
-    <div>Test
-        
+    <div>
+      Test
     </div>
-    
   );
 }
-
 
 export default Test;
