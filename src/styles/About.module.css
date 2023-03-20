@@ -1,0 +1,10 @@
+.about {
+  background-color: #ececec;
+  height: calc(100vh - 100px);
+}
+
+.title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+}
