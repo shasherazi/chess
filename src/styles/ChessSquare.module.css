@@ -1,0 +1,12 @@
+.square {
+  width: 4vw;
+  height: 4vw;
+}
+
+.black {
+  background-color: #333;
+}
+
+.white {
+  background-color: #ececec;
+}

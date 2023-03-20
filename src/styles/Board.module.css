@@ -1,0 +1,12 @@
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  background-color: #ececec;
+}
+
+.chessBoard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
