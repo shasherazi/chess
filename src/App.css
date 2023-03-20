@@ -51,3 +51,9 @@ h6 {
 ul {
   list-style-type: none;
 }
+
+.background {
+  background-image: url("./assets/images/chessBg.jpg");
+  background-size: cover;
+  background-position: center;
+}
