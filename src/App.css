@@ -20,9 +20,6 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-image: url("./assets/images/chessBg.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 img,
@@ -53,4 +50,10 @@ h6 {
 
 ul {
   list-style-type: none;
+}
+
+.background {
+  background-image: url("./assets/images/chessBg.jpg");
+  background-size: cover;
+  background-position: center;
 }
