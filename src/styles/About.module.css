@@ -1,10 +1,40 @@
 .about {
   background-color: #ececec;
   height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 .title {
-  text-align: center;
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.contributors {
+  margin-top: 20px;
+}
+
+.contributor {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.contributorLink {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.contributorLink:hover {
+  text-decoration: underline;
+  margin-left: 16px;
+}
+
+.contributorLink:hover ~ .contributorIcon {
+  display: none;
 }

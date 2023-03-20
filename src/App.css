@@ -57,3 +57,12 @@ ul {
   background-size: cover;
   background-position: center;
 }
+
+a {
+  color: #000;
+}
+
+a:hover {
+  background-color: #000;
+  color: #fff;
+}
