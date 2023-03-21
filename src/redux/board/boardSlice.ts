@@ -1,3 +1,4 @@
+import { Game } from 'js-chess-engine';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {};
