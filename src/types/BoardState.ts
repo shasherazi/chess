@@ -7,4 +7,5 @@ export interface BoardState {
         color: Color;
     } | null)[];
     selectedPiece: Square | null;
+    possibleMoves: string[];
 }

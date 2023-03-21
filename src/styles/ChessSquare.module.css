@@ -26,3 +26,14 @@
 .selected {
   background-color: #14551e80;
 }
+
+.possibleMove::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(75%, 75%);
+  width: 40%;
+  height: 40%;
+  background-color: #14551e80;
+  border-radius: 50%;
+}
