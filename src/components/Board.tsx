@@ -1,7 +1,16 @@
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { Chess } from 'chess.js';
 import styles from '../styles/Board.module.css';
 import ChessSquare from './ChessSquare';
 
 export default function Board() {
+  const { board } = useSelector((state: {board: Chess}) => state.board);
+
+  useEffect(() => {
+    console.log(board);
+  }, [board]);
+
   return (
     <div className={styles.board}>
       <div className={styles.chessBoard}>

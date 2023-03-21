@@ -1,7 +1,9 @@
-import { Game } from 'js-chess-engine';
+import { Chess } from 'chess.js';
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {};
+const initialState = {
+  board: new Chess().board(),
+};
 
 export const boardSlice = createSlice({
   name: 'board',
