@@ -1,9 +1,10 @@
 import { Color, PieceSymbol, Square } from 'chess.js';
 
 export interface BoardState {
-    board: ({
+    chessBoard: ({
         square: Square;
         type: PieceSymbol;
         color: Color;
     } | null)[];
+    selectedPiece: Square | null;
 }

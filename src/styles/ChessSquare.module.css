@@ -5,6 +5,8 @@
   align-items: center;
   position: relative;
   width: 100%;
+  border: none;
+  outline: none;
 }
 
 .black {
@@ -19,4 +21,8 @@
   position: absolute;
   width: 100%;
   -webkit-user-drag: none;
+}
+
+.selected {
+  background-color: #14551e80;
 }
