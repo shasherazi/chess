@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import styles from '../styles/ChessSquare.module.css';
 import { ChessSquareProps } from '../types/ChessSquareProps';
 import { RootState } from '../redux/store';
-import { selectPiece, possibleMoves } from '../redux/board/boardSlice';
+import { selectPiece, possibleMoves, movePiece } from '../redux/board/boardSlice';
 
 export default function ChessSquare(
   {
@@ -24,6 +24,9 @@ export default function ChessSquare(
       `}
       id={id}
       onClick={() => {
+        if (selectedPiece && possibleMovesArray.includes(id)) {
+          dispatch(movePiece(id));
+        }
         dispatch(selectPiece(id));
         dispatch(possibleMoves());
       }}

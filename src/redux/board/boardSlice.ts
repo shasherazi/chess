@@ -15,6 +15,7 @@ export const boardSlice = createSlice({
   initialState,
   reducers: {
     selectPiece: (state:BoardState, action) => ({ ...state, selectedPiece: action.payload }),
+
     possibleMoves: (state:BoardState) => {
       const { selectedPiece } = state;
       if (selectedPiece) {
@@ -23,10 +24,32 @@ export const boardSlice = createSlice({
       }
       return state;
     },
+
+    movePiece: (state:BoardState, action) => {
+      const { selectedPiece } = state;
+      if (selectedPiece) {
+        const move = chess.move({ from: selectedPiece, to: action.payload });
+        if (move) {
+          const newBoard = chess.board().flat();
+          const newSelectedPiece = move.to;
+          const moves = chess.moves({ square: newSelectedPiece }).map((m) => m.slice(-2));
+          return {
+            ...state,
+            chessBoard: newBoard,
+            selectedPiece: newSelectedPiece,
+            possibleMoves: moves,
+          };
+        }
+      }
+      return state;
+    },
   },
 });
 
-export const { selectPiece } = boardSlice.actions;
-export const { possibleMoves } = boardSlice.actions;
+export const {
+  selectPiece,
+  possibleMoves,
+  movePiece,
+} = boardSlice.actions;
 
 export default boardSlice.reducer;
