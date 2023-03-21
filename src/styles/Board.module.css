@@ -9,4 +9,6 @@
 .chessBoard {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
+  width: min(70vh, 70vw);
+  height: min(70vh, 70vw);
 }
