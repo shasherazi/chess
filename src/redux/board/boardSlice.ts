@@ -19,7 +19,10 @@ export const boardSlice = createSlice({
     possibleMoves: (state:BoardState) => {
       const { selectedPiece } = state;
       if (selectedPiece) {
-        const moves = chess.moves({ square: selectedPiece }).map((move) => move.slice(-2));
+        const moves = chess.moves({ square: selectedPiece }).map((move) => {
+          if (move.slice(-1) === '+' || move.slice(-1) === '#') return move.slice(-3, -1);
+          return move.slice(-2);
+        });
         return { ...state, possibleMoves: moves };
       }
       return state;
@@ -32,7 +35,10 @@ export const boardSlice = createSlice({
         if (move) {
           const newBoard = chess.board().flat();
           const newSelectedPiece = move.to;
-          const moves = chess.moves({ square: newSelectedPiece }).map((m) => m.slice(-2));
+          const moves = chess.moves({ square: selectedPiece }).map((m) => {
+            if (m.slice(-1) === '+' || m.slice(-1) === '#') return m.slice(-3, -1);
+            return m.slice(-2);
+          });
           return {
             ...state,
             chessBoard: newBoard,
