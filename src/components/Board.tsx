@@ -47,7 +47,7 @@ export default function Board() {
                 wins
               </h2>
             </div>
-            <Link to="/board" className={styles.playAgain} onClick={() => dispatch(resetGame())}>Play Again</Link>
+            <Link to="/chess/board" className={styles.playAgain} onClick={() => dispatch(resetGame())}>Play Again</Link>
           </div>
           )
       }

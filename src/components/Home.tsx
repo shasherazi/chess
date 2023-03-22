@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-      <Link to="/board" className={styles.button}>
+      <Link to="/chess/board" className={styles.button}>
         Play now!
       </Link>
     </div>

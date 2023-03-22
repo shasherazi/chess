@@ -11,9 +11,9 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Nav />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/board" element={<Board />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/chess" element={<Home />} />
+            <Route path="/chess/board" element={<Board />} />
+            <Route path="/chess/about" element={<About />} />
           </Route>
         </Routes>
       </BrowserRouter>
