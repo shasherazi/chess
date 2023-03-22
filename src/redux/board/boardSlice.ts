@@ -8,6 +8,8 @@ const initialState: BoardState = {
   chessBoard: chess.board().flat(),
   selectedPiece: null,
   possibleMoves: [],
+  isCheckMate: false,
+  turn: 'w',
 };
 
 export const boardSlice = createSlice({
@@ -39,16 +41,21 @@ export const boardSlice = createSlice({
             if (m.slice(-1) === '+' || m.slice(-1) === '#') return m.slice(-3, -1);
             return m.slice(-2);
           });
+          const isCheckMate = chess.isCheckmate();
+          const turn = chess.turn();
           return {
             ...state,
             chessBoard: newBoard,
             selectedPiece: newSelectedPiece,
             possibleMoves: moves,
+            isCheckMate,
+            turn,
           };
         }
       }
       return state;
     },
+    resetGame: () => initialState,
   },
 });
 
@@ -56,6 +63,7 @@ export const {
   selectPiece,
   possibleMoves,
   movePiece,
+  resetGame,
 } = boardSlice.actions;
 
 export default boardSlice.reducer;

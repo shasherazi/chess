@@ -8,4 +8,6 @@ export interface BoardState {
     } | null)[];
     selectedPiece: Square | null;
     possibleMoves: string[];
+    isCheckMate: boolean;
+    turn: Color;
 }

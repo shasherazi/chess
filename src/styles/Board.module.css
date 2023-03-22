@@ -12,3 +12,30 @@
   width: min(70vh, 70vw);
   height: min(70vh, 70vw);
 }
+
+.checkMateBoard {
+  filter: brightness(0.75);
+}
+
+.checkMate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 50px));
+  text-align: center;
+}
+
+.checkMateText {
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+
+.playAgain {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px;
+}
