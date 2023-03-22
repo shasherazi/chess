@@ -2,6 +2,7 @@
   "name": "chess",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://shasherazi.github.io/chess/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +13,9 @@
     "lint-css": "prettier --check . && csslint . --quiet",
     "lint-css-fix": "prettier --write . && csslint . --quiet",
     "lint": "npm run lint-ts && npm run lint-css",
-    "lint-fix": "npm run lint-ts-fix && npm run lint-css-fix"
+    "lint-fix": "npm run lint-ts-fix && npm run lint-css-fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -37,6 +40,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "prettier": "2.8.4",
     "typescript": "^4.9.5"
   }
