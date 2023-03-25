@@ -9,5 +9,6 @@ export interface BoardState {
     selectedPiece: Square | null;
     possibleMoves: string[];
     isCheckMate: boolean;
+    isStaleMate: boolean;
     turn: Color;
 }

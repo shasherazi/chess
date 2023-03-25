@@ -9,6 +9,7 @@ const initialState: BoardState = {
   selectedPiece: null,
   possibleMoves: [],
   isCheckMate: false,
+  isStaleMate: false,
   turn: 'w',
 };
 
@@ -42,6 +43,7 @@ export const boardSlice = createSlice({
             return m.slice(-2);
           });
           const isCheckMate = chess.isCheckmate();
+          const isStaleMate = chess.isStalemate();
           const turn = chess.turn();
           return {
             ...state,
@@ -49,6 +51,7 @@ export const boardSlice = createSlice({
             selectedPiece: newSelectedPiece,
             possibleMoves: moves,
             isCheckMate,
+            isStaleMate,
             turn,
           };
         }

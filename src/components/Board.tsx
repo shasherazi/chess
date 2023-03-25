@@ -9,13 +9,14 @@ export default function Board() {
   const dispatch = useDispatch();
   const chessBoard = useSelector((state:RootState) => state.board.chessBoard);
   const isCheckMate = useSelector((state:RootState) => state.board.isCheckMate);
+  const isStaleMate = useSelector((state: RootState) => state.board.isStaleMate);
   const turn = useSelector((state:RootState) => state.board.turn);
 
   let pos = 0;
 
   return (
     <div className={styles.board}>
-      <div className={`${styles.chessBoard} ${isCheckMate ? styles.checkMateBoard : ''}`}>
+      <div className={`${styles.chessBoard} ${(isCheckMate || isStaleMate) ? styles.checkMateBoard : ''}`}>
         {/* create a chess board using 1-8 a-h coordinates */}
         {
           Array.from(Array(8).keys()).map((row) => Array.from(Array(8).keys()).map((col) => {
@@ -45,6 +46,19 @@ export default function Board() {
                 {turn === 'w' ? 'Black' : 'White'}
                 {' '}
                 wins
+              </h2>
+            </div>
+            <Link to="/chess/board" className={styles.playAgain} onClick={() => dispatch(resetGame())}>Play Again</Link>
+          </div>
+          )
+      }
+      {
+          isStaleMate && (
+          <div className={styles.checkMate}>
+            <div className={styles.checkMateText}>
+              <h1>Stalemate</h1>
+              <h2>
+                It&apos;s a draw!
               </h2>
             </div>
             <Link to="/chess/board" className={styles.playAgain} onClick={() => dispatch(resetGame())}>Play Again</Link>
